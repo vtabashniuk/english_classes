@@ -1,0 +1,62 @@
+:root {
+  /* RGB-версії для динамічних rgba */
+  --color-accent-warm-rgb: 244, 162, 97;
+  --color-primary-blue-rgb: 63, 114, 175;
+
+  /* Фони */
+  --color-bg-primary: #ffffff; /* Основний білий фон */
+  --color-bg-secondary: #f4f6f8; /* Світло-сірий для секцій */
+
+  /* Акценти */
+  --color-primary-blue: #3f72af; /* Синій для кнопок/посилань */
+  --color-accent-warm: #f4a261; /* Персиковий для послуг/успіху */
+  --color-secondary-sand: #fcefee; /* фон для виділення секцій, більш «теплий» */
+
+  /* Текст */
+  --color-text-primary: #2e2e2e; /* Основний текст */
+  --color-text-secondary: #5f5f5f; /* Допоміжний текст */
+
+  /* Додаткові (градієнти, тіні) */
+  --color-gradient-hero: linear-gradient(
+    135deg,
+    var(--color-primary-blue) 0%,
+    var(--color-accent-warm) 100%
+  );
+
+  /* Акцент для hover Автоматично темніший */
+  --color-hover: color-mix(in srgb, var(--color-accent-warm) 80%, black);
+
+  --shadow-soft: 0 4px 12px rgba(var(--color-accent-warm-rgb), 0.1); /* Динамічна тінь */
+  --border-radius: 8px; /* Загальний радіус кутів */
+  --transition: all 0.3s ease; /* Плавні переходи */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* RGB-версії для dark */
+    --color-accent-warm-rgb: 244, 162, 97;
+    --color-primary-blue-rgb: 77, 157, 224;
+
+    /* Фони */
+    --color-bg-primary: #1c1c1e; /* Темний фон */
+    --color-bg-secondary: #2c2c2e; /* Для секцій */
+
+    /* Акценти */
+    --color-primary-blue: #4d9de0; /* Світліший синій */
+    --color-accent-warm: #f4a261; /* Персиковий можна залишити — він працює і на темному */
+    --color-secondary-sand: #3a2c28; /* Теплий темний фон для виділення */
+
+    /* Текст */
+    --color-text-primary: #f5f5f7; /* Світлий текст */
+    --color-text-secondary: #aaaaaa; /* Сірий для другорядного тексту */
+
+    /* Додаткові */
+    --color-gradient-hero: linear-gradient(
+      135deg,
+      var(--color-primary-blue) 0%,
+      var(--color-accent-warm) 100%
+    );
+    --shadow-soft: 0 4px 12px rgba(var(--color-accent-warm-rgb), 0.15); /* Посилена для dark */
+    --color-hover: color-mix(in srgb, var(--color-accent-warm) 70%, white); /* Світліший hover для dark */
+  }
+}

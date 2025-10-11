@@ -1,7 +1,11 @@
-import LanguageSwitcher from "../components/LanguageSwitcher/LanguageSwitcher";
+import { Outlet } from "react-router-dom";
 
 const MainLayout = () => {
-  return <LanguageSwitcher />;
+  return (
+    <main>
+      <Outlet />
+    </main>
+  );
 };
 
 export default MainLayout;

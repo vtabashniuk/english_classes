@@ -1,4 +1,3 @@
-// src/components/LanguageSwitcher.jsx
 import { useTranslation } from 'react-i18next';
 import { useState, useRef, useEffect } from 'react';
 import styles from './LanguageSwitcher.module.css';

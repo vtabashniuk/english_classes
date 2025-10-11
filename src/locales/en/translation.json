@@ -1,0 +1,63 @@
+{
+  "home": {
+    "title": "Welcome to English with Sarah",
+    "description": "Improve your English skills with personalized one-on-one lessons designed to help you achieve your language goals.",
+    "buttons": {
+      "studentArea": "Go to Student Area",
+      "meetTeacher": "Meet Your Teacher"
+    },
+    "benefits": {
+      "personalized": "Personalized Learning",
+      "flexible": "Flexible Schedule",
+      "proven": "Proven Results"
+    },
+    "choice": {
+      "title": "What would you like to do?",
+      "subtitle": "Choose an option below to get started",
+      "student": {
+        "title": "Student Area",
+        "desc": "Access your schedule and study materials",
+        "btn": "Get Started"
+      },
+      "about": {
+        "title": "About Sarah",
+        "desc": "Learn about your teacher and teaching methods",
+        "btn": "Get Started"
+      }
+    },
+    "cta": {
+      "title": "Ready for Today's Lesson?",
+      "desc": "Continue your English journey with personalized conversation practice and grammar exercises",
+      "btn": "Start Learning"
+    }
+  },
+  "student": {
+    "title": "Student Dashboard",
+    "login": "Login",
+    "schedule": "Your Schedule",
+    "materials": "Study Materials"
+  },
+  "about": {
+    "title": "About Sarah",
+    "bio": "Sarah is a certified English teacher with 10+ years of experience. She specializes in conversational English and exam preparation.",
+    "contact": {
+      "title": "Contact Me",
+      "form": {
+        "name": "Name",
+        "email": "Email",
+        "message": "Message",
+        "submit": "Send"
+      }
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "student": "Student Area",
+    "about": "About"
+  },
+  "lang": {
+    "en": "EN",
+    "ua": "UA",
+    "ru": "RU"
+  }
+}

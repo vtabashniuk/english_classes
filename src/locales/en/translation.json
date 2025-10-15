@@ -1,34 +1,40 @@
 {
   "home": {
-    "title": "Welcome to English with Sarah",
-    "description": "Improve your English skills with personalized one-on-one lessons designed to help you achieve your language goals.",
-    "buttons": {
-      "studentArea": "Go to Student Area",
-      "meetTeacher": "Meet Your Teacher"
-    },
-    "benefits": {
-      "personalized": "Personalized Learning",
-      "flexible": "Flexible Schedule",
-      "proven": "Proven Results"
-    },
-    "choice": {
-      "title": "What would you like to do?",
-      "subtitle": "Choose an option below to get started",
-      "student": {
-        "title": "Student Area",
-        "desc": "Access your schedule and study materials",
-        "btn": "Get Started"
+    "hero": {
+      "title": "Unlock your English<br />with Olga",
+      "description": "Boost your English with personalized one-on-one online lessons. Achieve your goals faster!",
+      "buttons": {
+        "studentArea": "Go to Student Area",
+        "meetTeacher": "Meet Your Teacher"
       },
-      "about": {
-        "title": "About Sarah",
-        "desc": "Learn about your teacher and teaching methods",
-        "btn": "Get Started"
+      "benefits": {
+        "personalized": "Personalized Tutoring",
+        "personalizedDesc": "Custom lessons tailored to your unique goals and level",
+        "flexible": "Flexible Scheduling",
+        "flexibleDesc": "Book sessions that fit your busy life — anytime, anywhere",
+        "proven": "Proven Success",
+        "provenDesc": "Time-tested methods with real, obvious achievements"
+      },
+      "imageAlt": "Cozy desk with English books, notebook 'Do You Speak English?', and learning tools",
+      "choice": {
+        "title": "Ready to Start?",
+        "subtitle": "Choose an option below to get started",
+        "student": {
+          "title": "Student Area",
+          "desc": "Access your schedule and study materials",
+          "btn": "Get Started"
+        },
+        "about": {
+          "title": "About Olga",
+          "desc": "Discover my teaching style and story",
+          "btn": "Learn More"
+        }
+      },
+      "cta": {
+        "title": "Ready for the first lesson?",
+        "desc": "Continue your English journey with personalized conversation and grammar practice",
+        "btn": "Start Learning"
       }
-    },
-    "cta": {
-      "title": "Ready for Today's Lesson?",
-      "desc": "Continue your English journey with personalized conversation practice and grammar exercises",
-      "btn": "Start Learning"
     }
   },
   "student": {

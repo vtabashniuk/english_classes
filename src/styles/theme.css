@@ -1,62 +1,65 @@
 :root {
-  /* RGB-версії для динамічних rgba */
-  --color-accent-warm-rgb: 244, 162, 97;
+  /* RGB-версії */
+  --color-accent-warm-rgb: 244, 162, 97; /* Залиш для fallback, але не основний */
   --color-primary-blue-rgb: 63, 114, 175;
 
-  /* Фони */
-  --color-bg-primary: #ffffff; /* Основний білий фон */
-  --color-bg-secondary: #f4f6f8; /* Світло-сірий для секцій */
-
-  /* Акценти */
-  --color-primary-blue: #3f72af; /* Синій для кнопок/посилань */
-  --color-accent-warm: #f4a261; /* Персиковий для послуг/успіху */
-  --color-secondary-sand: #fcefee; /* фон для виділення секцій, більш «теплий» */
-
-  /* Текст */
-  --color-text-primary: #2e2e2e; /* Основний текст */
-  --color-text-secondary: #5f5f5f; /* Допоміжний текст */
-
-  /* Додаткові (градієнти, тіні) */
+  /* Фони — пастельні для Hero */
+  --color-bg-primary: #ffffff; /* Білий */
+  --color-bg-secondary: #fdf9f6; /* Світло-кремовий (пастельний) */
   --color-gradient-hero: linear-gradient(
     135deg,
-    var(--color-primary-blue) 0%,
-    var(--color-accent-warm) 100%
-  );
+    #ffffff 0%,
+    #fdf9f6 100%
+  ); /* Легкий пастельний градієнт — свіжий, без тьмяності */
 
-  /* Акцент для hover Автоматично темніший */
-  --color-hover: color-mix(in srgb, var(--color-accent-warm) 80%, black);
+  /* Акценти — синій як основний */
+  --color-primary-blue: #3f72af; /* Синій для кнопок/hover */
+  --color-accent-warm: #e8d5c4; /* М'який кремовий акцент (замість персикового — теплий, але чистий) */
 
-  --shadow-soft: 0 4px 12px rgba(var(--color-accent-warm-rgb), 0.1); /* Динамічна тінь */
-  --border-radius: 8px; /* Загальний радіус кутів */
-  --transition: all 0.3s ease; /* Плавні переходи */
+  /* Текст */
+  --color-text-primary: #2e2e2e;
+  --color-text-secondary: #5f5f5f;
+
+  /* Hover/тінь */
+  --color-hover: color-mix(
+    in srgb,
+    var(--color-primary-blue) 80%,
+    black
+  ); /* Темніший синій для hover */
+  --shadow-soft: 0 4px 12px rgba(var(--color-primary-blue-rgb), 0.1); /* Синій тінь */
+  --border-radius: 12px; /* Трохи більше для glassmorphism */
+  --transition: all 0.3s ease;
+  --glass-bg: rgba(255, 255, 255, 0.1); /* Для карток: напівпрозорий glass */
+  --glass-border: 1px solid rgba(var(--color-primary-blue-rgb), 0.2); /* Синій border */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* RGB-версії для dark */
-    --color-accent-warm-rgb: 244, 162, 97;
-    --color-primary-blue-rgb: 77, 157, 224;
-
-    /* Фони */
-    --color-bg-primary: #1c1c1e; /* Темний фон */
-    --color-bg-secondary: #2c2c2e; /* Для секцій */
-
-    /* Акценти */
-    --color-primary-blue: #4d9de0; /* Світліший синій */
-    --color-accent-warm: #f4a261; /* Персиковий можна залишити — він працює і на темному */
-    --color-secondary-sand: #3a2c28; /* Теплий темний фон для виділення */
-
-    /* Текст */
-    --color-text-primary: #f5f5f7; /* Світлий текст */
-    --color-text-secondary: #aaaaaa; /* Сірий для другорядного тексту */
-
-    /* Додаткові */
+    /* Фони — м'які сірі пастельні */
+    --color-bg-primary: #1a1a1a; /* Темно-сірий */
+    --color-bg-secondary: #2a2a2a; /* Світліший сірий */
     --color-gradient-hero: linear-gradient(
       135deg,
-      var(--color-primary-blue) 0%,
-      var(--color-accent-warm) 100%
-    );
-    --shadow-soft: 0 4px 12px rgba(var(--color-accent-warm-rgb), 0.15); /* Посилена для dark */
-    --color-hover: color-mix(in srgb, var(--color-accent-warm) 70%, white); /* Світліший hover для dark */
+      #1a1a1a 0%,
+      #2a2a2a 100%
+    ); /* Пастельний градієнт для dark */
+
+    /* Акценти — світліший синій */
+    --color-primary-blue: #4d9de0;
+    --color-accent-warm: #e8d5c4; /* Залишаємо кремовий — контрастний на темному */
+
+    /* Текст — світлий */
+    --color-text-primary: #f5f5f7;
+    --color-text-secondary: #aaaaaa;
+
+    /* Hover/тінь */
+    --color-hover: color-mix(
+      in srgb,
+      var(--color-primary-blue) 70%,
+      white
+    ); /* Світліший синій */
+    --shadow-soft: 0 4px 12px rgba(77, 157, 224, 0.15);
+    --glass-bg: rgba(42, 42, 42, 0.8); /* Темний glass для dark */
+    --glass-border: 1px solid rgba(77, 157, 224, 0.3); /* Світлий синій border */
   }
 }

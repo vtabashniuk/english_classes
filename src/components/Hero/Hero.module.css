@@ -23,7 +23,9 @@
 .hero h1 {
   font-size: clamp(2rem, 5vw, 3.5rem);
   margin-bottom: 1rem;
-  color: var(--color-primary-blue); /* Синій акцент для h1 — виділяється на пастелі */
+  color: var(
+    --color-primary-blue
+  ); /* Синій акцент для h1 — виділяється на пастелі */
 }
 
 .hero p {
@@ -42,6 +44,18 @@
   flex-wrap: wrap;
 }
 
+.heroButtons .buttonContainer {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.buttonContainer .icon {
+  width: 1.375rem;
+  padding: 0;
+  filter: brightness(1) saturate(1.2);
+}
+
 .heroButtons .button {
   text-decoration: none;
   background-color: var(--color-primary-blue); /* Синій bg для кнопок */
@@ -51,14 +65,32 @@
   transition: var(--transition);
   box-shadow: var(--shadow-soft);
   font-weight: 500;
-  min-width: 200px;
+  min-width: 232px;
   text-align: center;
 }
 
 .heroButtons .button:hover {
-  background-color: var(--color-hover); /* Темніший синій — чистий, контрастний з white */
+  background-color: var(
+    --color-hover
+  ); /* Темніший синій — чистий, контрастний з white */
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(var(--color-primary-blue-rgb), 0.3);
+}
+
+.heroButtons .inverted {
+  background-color: white;
+  color: var(--color-primary-blue);
+  border: 1px solid var(--color-primary-blue); /* Легкий border для чіткості */
+}
+
+.heroButtons .inverted:hover {
+  background-color: var(--color-primary-blue);
+  color: white;
+  border-color: var(--color-hover);
+}
+
+.heroButtons .inverted:hover .buttonContainer .icon {
+  filter: brightness(0) invert(1); /* Білий колір для іконки при hover */
 }
 
 .benefitsGrid {
@@ -84,17 +116,22 @@
 }
 
 .benefitCard:hover {
-  background: rgba(var(--color-primary-blue-rgb), 0.1); /* Легкий синій overlay на hover */
+  background: rgba(
+    var(--color-primary-blue-rgb),
+    0.1
+  ); /* Легкий синій overlay на hover */
   border-color: var(--color-primary-blue);
   transform: translateY(-2px);
 }
 
 .benefitCard h3 {
+  color: var(--color-text-primary);
   font-size: clamp(1rem, 2.5vw, 1.25rem);
   margin-bottom: 0.5rem;
 }
 
 .benefitCard p {
+  color: var(--color-text-secondary);
   font-size: clamp(0.875rem, 2vw, 1rem);
   opacity: 0.85;
   margin-bottom: 0;
@@ -149,7 +186,7 @@
 
 @media (min-width: 769px) {
   .heroButtons .button {
-    min-width: 232px;
+    min-width: 268px;
   }
 
   .benefitCard p {

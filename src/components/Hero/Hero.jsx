@@ -12,7 +12,10 @@ const Hero = () => {
       className={styles.hero}
     >
       <div className={styles.heroContent}>
-        <h1 itemProp="name" dangerouslySetInnerHTML={{ __html: t("home.hero.title") }} />
+        <h1
+          itemProp="name"
+          dangerouslySetInnerHTML={{ __html: t("home.hero.title") }}
+        />
         <p>
           {t("home.hero.description", {
             defaultValue:
@@ -22,14 +25,31 @@ const Hero = () => {
         {/* Кнопки CTA */}
         <div className={styles.heroButtons}>
           <Link to="/student-area" className={styles.button}>
-            {t("home.hero.buttons.studentArea", {
-              defaultValue: "Go to Student Area",
-            })}
+            <div className={styles.buttonContainer}>
+              <img
+                className={styles.icon}
+                src="/assets/person.svg"
+                alt="Enter to the cabinet"
+              />
+              {t("home.hero.buttons.studentArea", {
+                defaultValue: "Go to Student Area",
+              })}
+            </div>
           </Link>
-          <Link to="/about-me" className={styles.button}>
-            {t("home.hero.buttons.meetTeacher", {
-              defaultValue: "Meet Your Teacher",
-            })}
+          <Link
+            to="/about-me"
+            className={`${styles.button} ${styles.inverted}`}
+          >
+            <div className={styles.buttonContainer}>
+              <img
+                className={styles.icon}
+                src="/assets/info.svg"
+                alt="Information"
+              />
+              {t("home.hero.buttons.meetTeacher", {
+                defaultValue: "Meet Your Teacher",
+              })}
+            </div>
           </Link>
         </div>
 
